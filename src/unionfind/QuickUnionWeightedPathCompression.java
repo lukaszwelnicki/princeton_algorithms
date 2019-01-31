@@ -38,6 +38,7 @@ public class QuickUnionWeightedPathCompression implements UnionFind {
 
     private int findRoot(int p) {
         while (p != id[p]) {
+            //path compression, point more closely to root
             id[p] = id[id[p]];
             p = id[id[p]];
         }
