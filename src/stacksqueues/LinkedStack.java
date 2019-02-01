@@ -1,6 +1,8 @@
 package stacksqueues;
 
-public class LinkedStack<T> implements Stack<T> {
+import java.util.Iterator;
+
+public class LinkedStack<T> implements Stack<T>, Iterable<T> {
 
     private Node<T> head = null;
 
@@ -20,6 +22,27 @@ public class LinkedStack<T> implements Stack<T> {
     @Override
     public boolean isEmpty() {
         return head == null;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return null;
+    }
+
+    private class LinkedListIterator implements Iterator<T> {
+        private Node<T> current = head;
+
+        @Override
+        public boolean hasNext() {
+            return current.next != null;
+        }
+
+        @Override
+        public T next() {
+            T result = current.item;
+            current = current.next;
+            return result;
+        }
     }
 
     private static class Node<S> {
