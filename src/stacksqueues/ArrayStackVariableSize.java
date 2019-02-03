@@ -4,9 +4,10 @@ package stacksqueues;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class ArrayStackVariableSize<T> implements Stack<T>, Iterable<T> {
+public class ArrayStackVariableSize<T extends Comparable<T>> implements Stack<T>, Iterable<T> {
     private T[] objects;
     private int N = 0;
+    private T max;
 
     @SuppressWarnings("unchecked")
     public ArrayStackVariableSize() {
@@ -18,6 +19,7 @@ public class ArrayStackVariableSize<T> implements Stack<T>, Iterable<T> {
         //double the size of the array when it gets full
         if (N == objects.length) resizeStack(2 * objects.length);
         objects[N++] = object;
+        if (max == null || object.compareTo(max) > 0) max = object;
     }
 
     @Override
@@ -57,4 +59,7 @@ public class ArrayStackVariableSize<T> implements Stack<T>, Iterable<T> {
         }
     }
 
+    public T getMax() {
+        return max;
+    }
 }
