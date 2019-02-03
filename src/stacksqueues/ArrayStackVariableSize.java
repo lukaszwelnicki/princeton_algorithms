@@ -45,6 +45,7 @@ public class ArrayStackVariableSize<T> implements Stack<T>, Iterable<T> {
 
     private class ReverseArrayIterator implements Iterator<T> {
         private int i = N;
+
         @Override
         public boolean hasNext() {
             return i > 0;
