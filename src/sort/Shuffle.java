@@ -2,7 +2,7 @@ package sort;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import static sort.SortUtils.swap;
+import static common.PrimitiveOperations.swap;
 
 public class Shuffle {
     public static Object[] shuffle(Object[] items) {

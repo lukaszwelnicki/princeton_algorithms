@@ -1,7 +1,8 @@
 package sort;
 
-import static sort.SortUtils.less;
-import static sort.SortUtils.swap;
+
+import static common.PrimitiveOperations.less;
+import static common.PrimitiveOperations.swap;
 
 public class SelectionSort {
     public static Comparable[] sort(Comparable[] sorted) {

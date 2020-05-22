@@ -1,7 +1,7 @@
 package sort;
 
-import static sort.SortUtils.less;
-import static sort.SortUtils.merge;
+import static common.PrimitiveOperations.less;
+import static common.PrimitiveOperations.merge;
 
 public class MergeSort {
 

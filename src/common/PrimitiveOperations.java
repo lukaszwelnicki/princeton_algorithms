@@ -1,17 +1,17 @@
-package sort;
+package common;
 
-public class SortUtils {
-    static boolean less(Comparable v, Comparable w) {
+public class PrimitiveOperations {
+    public static boolean less(Comparable v, Comparable w) {
         return v.compareTo(w) < 0;
     }
 
-    static void swap(Object[] a, int i, int j) {
+    public static void swap(Object[] a, int i, int j) {
         Object swap = a[i];
         a[i] = a[j];
         a[j] = swap;
     }
 
-    static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
+    public static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
         }
@@ -24,7 +24,7 @@ public class SortUtils {
         }
     }
 
-    static int partition(Comparable[] a, int lo, int hi) {
+    public static int partition(Comparable[] a, int lo, int hi) {
         int i = lo, j = hi + 1;
         while (true) {
             while (less(a[++i], a[lo]))
@@ -41,7 +41,7 @@ public class SortUtils {
         return j;
     }
 
-    static void exch(Comparable[] a, int from, int to) {
+    public static void exch(Comparable[] a, int from, int to) {
         Comparable toObj = a[to];
         a[to] = a[from];
         a[from] = toObj;

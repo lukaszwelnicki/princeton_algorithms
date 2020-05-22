@@ -1,6 +1,6 @@
 package sort;
 
-import static sort.SortUtils.merge;
+import static common.PrimitiveOperations.merge;
 
 public class MergeSortBottomUp {
 

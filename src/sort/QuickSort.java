@@ -1,12 +1,12 @@
 package sort;
 
-import edu.princeton.cs.algs4.StdRandom;
+//import edu.princeton.cs.algs4.StdRandom;
 
-import static sort.SortUtils.partition;
+import static common.PrimitiveOperations.partition;
 
 public class QuickSort {
     public static void sort(Comparable[] a) {
-        StdRandom.shuffle(a);
+//        StdRandom.shuffle(a);
         sort(a, 0, a.length - 1);
     }
 
