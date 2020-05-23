@@ -8,7 +8,7 @@ public class BinaryHeap<T extends Comparable<T>> implements MaxPriorityQueue<T> 
     private int size;
 
     public BinaryHeap(int capacity) {
-        this.priorityQueue = (T[]) new Comparable[capacity];
+        this.priorityQueue = (T[]) new Comparable[capacity + 1];
     }
 
     @Override
