@@ -14,6 +14,11 @@ public class UnorderedMaxPriorityQueue<T extends Comparable<T>> implements MaxPr
     }
 
     @Override
+    public T max() {
+        return priorityQueue[getMaxIndex()];
+    }
+
+    @Override
     public void insert(T key) {
         priorityQueue[size++] = key;
     }
@@ -33,11 +38,6 @@ public class UnorderedMaxPriorityQueue<T extends Comparable<T>> implements MaxPr
     @Override
     public int size() {
         return size;
-    }
-
-    @Override
-    public T max() {
-        return priorityQueue[getMaxIndex()];
     }
 
     private int getMaxIndex() {
