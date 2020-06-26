@@ -1,9 +1,5 @@
 package sort;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.util.Arrays;
-
 import static common.PrimitiveOperations.exch;
 import static common.PrimitiveOperations.less;
 
